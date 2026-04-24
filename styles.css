@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-header {
+    background-color: #260d08;
+    color: #f1f0ee;
+    padding: 15px 50px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* =========================================
+            PÁGINA INICIAL
+   ========================================= */
+
+/* Logo */
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MedievalSharp', cursive;
+    line-height: 0.9;
+    color: #f1f0ee;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-header .logo {
+    align-items: flex-start;
+}
+
+.footer-principal .logo {
+    align-items: center;
+}
+
+.logo-top {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.logo-main, .logo-bottom {
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+/* Menu de navegação */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #f1f0ee;
+    font-size: 14px;
+    transition: 0.3s;
+    
+}
+
+.nav-menu ul li a:hover { color: #9c4c23; }
+
+/* Seção da página inicial */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    /* Imagem de fundo */
+    background-image: url('./outros/background_site.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 8%;
+    color: #f1f0ee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-content h2 { font-size: 20px; margin-bottom: 10px; }
+.hero-content h1 { font-size: 48px; font-weight: 700; margin-bottom: 30px; }
+
+/* Botão "Peça Agora" */
+.btn-cta {
+    display: inline-block;
+    background-color: #9c4c23;
+    color: #f1f0ee;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #ba5a29;
+    transform: scale(1.05);
+}
+
+/* =========================================
+            SEÇÃO PRODUTOS
+   ========================================= */
+
+.products-section {
+    background-color: #f6f4f0;
+    padding-bottom: 80px; 
+    font-family: 'Poppins', sans-serif;
+    color: #260d08;
+}
+
+.title-banner {
+    background-color: #E2D9C8;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Títulos da seção */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #260d08;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+/* Sistema de grid para os produtos */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.especiais-grid {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* =========================================
+            ESTILIZAÇÃO DO CARD DOS PRODUTOS
+   ========================================= */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    
+    /* Dimensões */
+    width: 100%;
+    max-width: 276px;
+    min-height: 496px;
+    
+    /* Preenchimento do retângulo externo */
+    background-color: rgba(226, 217, 200, 0.2); 
+    
+    /* Traçado externo */
+    border: 1.5px solid #E2D9C8; 
+    border-radius: 20px; 
+    
+    /* Espaçamentos internos */
+    padding: 16px 16px 18px 16px;
+    gap: 19px;
+    
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Container da imagem do produto */
+.img-container {
+    width: 100%;
+    height: 280px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Preenchimento do retângulo interno */
+    background-color: rgba(216, 208, 193, 0.7);
+    
+    border-radius: 12px; 
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+/* Textos do Produto */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.product-info p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #260d08;
+}
+
+/* =========================================
+            SEÇÃO QUEM SOMOS
+   ========================================= */
+
+.about-section {
+    background-color: #f6f4f0;
+    padding-bottom: 80px;
+    font-family: 'Poppins', sans-serif;
+    color: #260d08;
+}
+
+.about-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 50px;
+}
+
+.history-layout {
+    flex-wrap: wrap;
+}
+
+/* Estilização do card de texto */
+.about-card {
+    background-color: rgba(226, 217, 200, 0.2);
+    border: 1.5px solid #E2D9C8;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    
+/* Configuração da tipografia interna */
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.wide-card {
+    max-width: 800px;
+}
+
+/* Container da foto do bar */
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================================
+            RODAPÉ (FOOTER)
+   ========================================= */
+
+.footer-principal {
+    background-color: #1c0e08;
+    color: white;
+    padding: 20px 5% 10px 5%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px solid #3a1c0d; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-coluna h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.footer-coluna h3 a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-coluna h3 a:hover {
+    color: #9c4c23;
+}
+
+.footer-coluna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-coluna ul li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+/* =========================================
+            COLUNA DE CONTATOS
+   ========================================= */
+
+.contatos-coluna li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: none !important;
+}
+
+/* Itens que possuem a função de copiar */
+.contatos-coluna li[onclick] {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contatos-coluna li[onclick]:hover {
+    color: #9c4c23;
+}
+
+.contatos-coluna a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+}
+
+.contatos-coluna a:hover {
+    color: #9c4c23;
+}
+
+.contatos-coluna i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
